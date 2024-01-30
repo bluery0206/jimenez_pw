@@ -12,6 +12,7 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+    scroll-behavior: smooth;
     font-family: 'reg';
 }
 
@@ -37,14 +38,95 @@ nav {
 nav a {
     padding: 5px 15px;
     text-decoration: none;
-    background: white;
-    color: black;
+    color: whitesmoke;
+    color: rgb(37, 37, 37);
 }
 
 nav a:hover{
-    filter: brightness(80%);
+    background-color: rgb(37, 37, 37);
+    color: whitesmoke;
+    
 }
 
-section {
-    padding: 40dvh 20dvw;
+section, footer{
+    padding: 10dvh 10dvw;
+}
+
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80dvh;
+}
+
+#hero h1 {
+    font-size: 3rem;
+}
+
+#hero h3 {
+    font-size: 2rem;
+}
+
+#hero-l {
+    max-width: 40%;
+}
+#hero-l p{
+    margin: 10px 0;
+}
+
+#hero-r,
+#hero-r img {
+    width: 30dvw;
+    height: 30dvw;
+}
+#hero-r {
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 5px 10px 16px 0px rgb(121, 121, 121);
+}
+
+#hero-r img {
+    object-fit: cover;
+}
+
+.connect-btn {
+    padding: 10px 20px;
+    background-color: rgb(37, 37, 37);
+    color: whitesmoke;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.connect-btn:hover, .active {
+    background-color: white;
+    border: 1px solid rgb(37, 37, 37);
+    color: rgb(37, 37, 37);
+}
+
+footer {
+    background-color: rgb(16, 17, 29);
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer ul li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: whitesmoke;
+    gap: 10px;
 }
