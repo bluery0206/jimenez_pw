@@ -9,10 +9,10 @@
 }
 
 * {
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'reg';
 }
 
@@ -26,6 +26,10 @@ header {
     justify-content: space-between;
     padding: 30px 60px;
     align-items: center;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 nav {
@@ -38,21 +42,19 @@ nav {
 nav a {
     padding: 5px 15px;
     text-decoration: none;
-    color: whitesmoke;
     color: rgb(37, 37, 37);
 }
 
 nav a:hover{
     background-color: rgb(37, 37, 37);
     color: whitesmoke;
-    
 }
 
 section, footer{
     padding: 10dvh 10dvw;
 }
 
-#hero, #about, #gallery {
+#hero, #about, #gallery, #skills {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -142,6 +144,22 @@ section, footer{
     width: 20dvw; 
 }
 
+#skills {
+    gap: 20px;
+}
+
+
+#skills-l img {
+    height: 100dvh;
+    object-fit: cover;
+    width: 20dvw; 
+}
+
+#skills-r img {
+    height: 20dvw;
+    object-fit: cover;
+    width: 20dvw; 
+}
 
 .connect-btn {
     padding: 10px 20px;
@@ -185,6 +203,19 @@ footer ul li a{
     gap: 10px;
 }
 
+@media screen and (max-width: 768px)  {
+    header, nav {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2dvh;
+    }
+    
+    #hero, #about, #gallery-container, #skills {
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
 
 /*
 caf-noir: rgba(71, 56, 35, 1);
